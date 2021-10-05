@@ -1,0 +1,678 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Foodish - Let's Become Foodie NOW</title>
+</head>
+
+<body>
+    <!-- Nav bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-warning">
+        <div class="container-fluid">
+            <img class="bi me-2" width="100" height="80" src="images/foodish.png" alt="">
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Menu
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Appetizers</a></li>
+                            <li><a class="dropdown-item" href="#">Pakistani</a></li>
+                            <li><a class="dropdown-item" href="#">Mexican</a></li>
+                            <li><a class="dropdown-item" href="#">Italian</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Drinks</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">Contact</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-black bg-light my-2" type="submit">Search</button>
+                </form>
+                <div class="mx-2">
+                    <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
+                    <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#signupModal">Sign up</button>
+                 
+                </div>
+            </div>
+        </div>
+    </nav>
+
+<!--Login Modal-->
+
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="loginModalLabel">Login to Foodish</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Email address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Password</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+              
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Sign up-->
+
+  <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="signupModalLabel">Become Foodish Member</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Email address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label"> Create Password</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+              
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    <!-- Hero Section -->
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="/images/food1.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>One-Step Delicious FOOD Place</h5>
+                    <p>We are having variety for YOU</p>
+
+                    <button type="button" class="btn btn-success">Pakistani</button>
+                    <button type="button" class="btn btn-warning">Mexican</button>
+                    <button type="button" class="btn btn-danger">Italian</button>
+
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="/images/Food4.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>We got BEST chefs</h5>
+                    <p>To make your ORDER beyond exceptions</p>
+                    <button type="button" class="btn btn-success">Pakistani</button>
+                    <button type="button" class="btn btn-warning">Mexican</button>
+                    <button type="button" class="btn btn-danger">Italian</button>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="/images/Food2.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Let's DINE together</h5>
+                    <p>Make HAPPY memories at Foodish</p>
+                    <button type="button" class="btn btn-success">Pakistani</button>
+                    <button type="button" class="btn btn-warning">Mexican</button>
+                    <button type="button" class="btn btn-danger">Italian</button>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <!-- About us -->
+    <dive class="container">
+        <section class="py-5 text-center container">
+            <div class="row py-lg-5">
+                <div class="col-lg-6 col-md-8 mx-auto">
+                    <h1 class="fw-light">About us</h1>
+                    <p class="lead text-muted">We have been serving customers with our delicious food for the past 22
+                        years. We have customers which our proud of us.</p>
+                    <p>
+
+                    </p>
+                </div>
+            </div>
+        </section>
+    </dive>
+    <!-- OUR MENU -->
+    <div class="container my-4">
+        <h2>OUR MENU</h2>
+        <div class="row mb-2">
+            <div class="col-md-6">
+                <div
+                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-primary"></strong>
+
+                        <div class="card mb-3" style="max-width: 540px;">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="images/appetizer.jpg" class="img-fluid rounded-start" alt="...">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Appetizers</h5>
+                                        <p class="card-text">Explore Wide Range of Starters
+                                        </p>
+                                        <button type="button" class="btn btn-warning">START!</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div
+                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-success"></strong>
+
+                        <div class="card mb-3" style="max-width: 540px;">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="images/pakistanifood.jpg" class="img-fluid rounded-start" alt="...">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Pakistani Food</h5>
+                                        <p class="card-text">Explore your favourite pakistani foods
+                                        </p>
+                                        <button type="button" class="btn btn-warning">START!</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mb-2">
+            <div class="col-md-6">
+                <div
+                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-primary"></strong>
+
+                        <div class="card mb-3" style="max-width: 540px;">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="images/mexican.jpg" class="img-fluid rounded-start" alt="...">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Mexican</h5>
+                                        <p class="card-text">Explore Mexican Dishes
+                                        </p>
+                                        <button type="button" class="btn btn-warning">START!</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div
+                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-success"></strong>
+
+                        <div class="card mb-3" style="max-width: 540px;">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="images/Food5.jpg" class="img-fluid rounded-start" alt="...">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Italian</h5>
+                                        <p class="card-text">Explore Italian Dishes
+                                        </p>
+                                        <button type="button" class="btn btn-warning">START!</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mb-2">
+            <div class="col-md-6">
+                <div
+                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-primary"></strong>
+
+                        <div class="card mb-3" style="max-width: 540px;">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="images/drinks.jpg" class="img-fluid rounded-start" alt="...">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Drinks</h5>
+                                        <p class="card-text">Explore Wide Range of Drinks
+                                        </p>
+                                        <button type="button" class="btn btn-warning">START!</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div
+                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-success"></strong>
+
+                        <div class="card mb-3" style="max-width: 540px;">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="images/fastfood.jpg" class="img-fluid rounded-start" alt="...">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Fast Food</h5>
+                                        <p class="card-text">Explore best ever fast food
+                                        </p>
+                                        <button type="button" class="btn btn-warning">START!</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Image Slider -->
+
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="images/Sandwich.jpg" class="d-block w-100" alt="...">
+            </div>
+
+            <div class="carousel-item">
+                <img src="images/gettogether.jpg" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <!-- 3 Main Dishes -->
+    <div class="container marketing my-4">
+        <div class="row">
+            <div class="col-lg-4">
+                <img class="bd-placeholder-img rounded-circle" width="200" height="200" src="images/pizza1.png" alt="">
+
+
+                <h2>Pepperoni Pizza</h2>
+                <p>Extra-virgin olive oil, garlic, mozzarella cheese, onions, mushrooms, green olives, black olives,
+                    fresh tomatoes</p>
+                <p><a class="btn btn-danger" href="#">View details »</a></p>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+                <img class="bd-placeholder-img rounded-circle" width="200" height="200" src="images/pizza2.png" alt="">
+
+                <h2>Trio Cheese</h2>
+                <p>Mouth watering pepperoni, cabanossi, mushroom, capsicum, black olives and stretchy mozzarella</p>
+                <p><a class="btn btn-danger" href="#">View details »</a></p>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+                <img class="bd-placeholder-img rounded-circle" width="200" height="200" src="images/pizza3.png" alt="">
+
+                <h2>Italiano Original</h2>
+                <p>Ricotta, sun dried tomatoes, garlic, mozzarella cheese, topped with lightly drizzled red sauce</p>
+                <p><a class="btn btn-danger" href="#">View details »</a></p>
+            </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+    </div>
+    <!--FREE DELIVERY -->
+    <dive class="container">
+        <section class="py-5 text-center container" id="textoverimg">
+            <div class="row py-lg-5">
+                <div class="col-lg-6 col-md-8 mx-auto ">
+                    <h1 class="fw-light ">FREE DELIVERY</h1>
+                    <p class="lead text-muted text-primary">DEAL OF THE DAY</p>
+                    <p>
+
+                    </p>
+                    
+                    <button type="button" class="btn btn-warning">ORDER NOW</button>
+                </div>
+            </div>
+        </section>
+    </dive>
+    
+
+
+    <!-- Simple Image -->
+    <div id="carouselExampleCaptions" class="carousel slide my-4" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="images/eating.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+
+                </div>
+            </div>
+        </div>
+
+        <!--4 Cards Quality, On time, MasterChefs, TasteFood -->
+        <div class="container my-4">
+            <div class="row mb-2">
+                <div class="col-md-3">
+                    <div class="row g-0 rounded overflow-hidden flex-md-row mb-4 h-md-250 position-relative">
+                        <div class="col p-4 d-flex flex-column position-static">
+                            <strong class="d-inline-block mb-2 text-primary"></strong>
+
+                            <div class="card" style="width: 15rem;">
+                                <img src="images/quality.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Best Quality</h5>
+                                    <p class="card-text">Some quick example text to build on the card title</p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="row g-0 rounded overflow-hidden flex-md-row mb-4 h-md-250 position-relative">
+                        <div class="col p-4 d-flex flex-column position-static">
+                            <strong class="d-inline-block mb-2 text-primary"></strong>
+
+                            <div class="card" style="width: 15rem;">
+                                <img src="images/On-time.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">On Time</h5>
+                                    <p class="card-text">Some quick example text to build on the card title</p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="row g-0 rounded overflow-hidden flex-md-row mb-4 h-md-250 position-relative">
+                        <div class="col p-4 d-flex flex-column position-static">
+                            <strong class="d-inline-block mb-2 text-success"></strong>
+
+                            <div class="card" style="width: 15rem;">
+                                <img src="images/chefs.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">MasterChefs</h5>
+                                    <p class="card-text">Some quick example text to build on the card title</p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="row g-0 rounded overflow-hidden flex-md-row mb-4 h-md-250 position-relative">
+                        <div class="col p-4 d-flex flex-column position-static">
+                            <strong class="d-inline-block mb-2 text-primary"></strong>
+
+                            <div class="card" style="width: 15rem;">
+                                <img src="images/taste.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Taste Food</h5>
+                                    <p class="card-text">Some quick example text to build on the card title</p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+<!--blog-->
+
+<main class="container">
+    <div class="p-4 p-md-5 mb-4 text-white rounded" id="blogbgimg">
+      <div class="col-md-6 px-0">
+        <h1 class="display-4 fst-italic btn-danger" >Recogized as #1 Best Blog</h1>
+        <p class="lead my-3 bg-warning text-black">Multiple lines of text that form the lede, informing new readers quickly and efficiently about what’s most interesting in this post’s contents.</p>
+        <p class="lead mb-0"><a href="#" class="  fw-bold">Continue reading...</a></p>
+      </div>
+    </div>
+  
+    <div class="row mb-2">
+      <div class="col-md-6">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-primary">Food Dishes</strong>
+            <h3 class="mb-0">
+                25+ Traditional Pakistani Dishes</h3>
+            <div class="mb-1 text-muted">Nov 12</div>
+            <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+            <a href="#" class="stretched-link">Continue reading</a>
+          </div>
+          <div class="col-auto d-none d-lg-block">
+              <img class="bd-placeholder-img" width="200" height="250" src="images/pakfood.jpg" alt="">
+            
+  
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-success">Recipes</strong>
+            <h3 class="mb-0">
+                Homemade Red Sauce Pasta Recipe</h3>
+            <div class="mb-1 text-muted">Nov 11</div>
+            <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+            <a href="#" class="stretched-link">Continue reading</a>
+          </div>
+          <div class="col-auto d-none d-lg-block">
+            <img class="bd-placeholder-img" width="200" height="250" src="images/pasta.jpg" alt="">
+  
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    
+          <h3>Explore Dishes</h3>
+          <p>And don't forget to ORDER NOW</p>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Cooking</th>
+                <th>Ready to serve</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Pakistani</td>
+                <td>10</td>
+                <td>11</td>
+              </tr>
+              <tr>
+                <td>Mexican</td>
+                <td>4</td>
+                <td>3</td>
+              </tr>
+              <tr>
+                <td>Italian</td>
+                <td>7</td>
+                <td>9</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td>Drinks</td>
+                <td>21</td>
+                <td>23</td>
+              </tr>
+            </tfoot>
+          </table>
+  
+          
+    </div>
+  
+  </main>
+
+
+    <!-- Footer -->
+    <div class="container">
+        <footer class="row row-cols-5 py-5 my-5 border-top">
+            <div class="col">
+                <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
+                    <img class="bi me-2" width="100" height="80" src="images/foodish.png" alt="">
+
+                </a>
+                <p>BEST dishes EVERRRRRRRRRRRR EAT, DRINK AND ENJOY!</p>
+            </div>
+
+            <div class="col">
+
+            </div>
+
+            <div class="col">
+                <h5>Quick Links</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Menu</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Contact</a></li>
+
+                </ul>
+            </div>
+
+            <div class="col">
+                <h5>More Info</h5>
+                <ul class="nav flex-column">
+                  
+                    <a class="list-group-item list-group-item-action">Monday-Thursday</a>
+                    <a class="list-group-item list-group-item-action">10:00 - 20:00</a>
+                    <a class="list-group-item list-group-item-action">Saturday-Sunday</a>
+                    <a class="list-group-item list-group-item-action">CLOSED</a>
+                </ul>
+
+            </div>
+
+
+            <div class="col">
+                <h5>Menu</h5>
+                <ul class="nav flex-column">
+                    <img class="bi me-2 my-2" width="100" height="80" src="images/pakistanifood.jpg" alt="">
+                    <img class="bi me-2 my-2" width="100" height="80" src="images/mexican.jpg" alt="">
+                    <img class="bi me-2 my-2" width="100" height="80" src="images/drinks.jpg" alt="">
+
+
+                </ul>
+            </div>
+
+        </footer>
+        <p class="text-muted">FOODISH © 2021</p>
+    </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
